@@ -11,7 +11,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {DetailPage} from '../pages/detail/detail';
+import { DetailPage } from '../pages/detail/detail';
+import { InfoPage } from '../pages/info/info';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +22,12 @@ import {DetailPage} from '../pages/detail/detail';
     ContactPage,
     HomePage,
     TabsPage,
-    DetailPage
+    DetailPage,
+    InfoPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, { swipeBackEnabled: true })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,12 +36,13 @@ import {DetailPage} from '../pages/detail/detail';
     ContactPage,
     HomePage,
     TabsPage,
-    DetailPage
+    DetailPage,
+    InfoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
