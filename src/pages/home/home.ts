@@ -1,8 +1,9 @@
 
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, Nav } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
 import { InfoPage } from '../info/info';
+import { FriendsPage } from '../friends/friends';
 
 @Component({
   selector: 'page-home',
@@ -10,17 +11,15 @@ import { InfoPage } from '../info/info';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(public nav: Nav,public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
-  onClickDetail() {
-
-    this.navCtrl.push(DetailPage);
+  onClickFriends() {
+    this.navCtrl.push(FriendsPage);
   }
 
-  onClickInfoModel() {
-    let modal = this.modalCtrl.create(InfoPage);
-    modal.present();
+  onClickInfo() {
+    this.nav.push(InfoPage);
   }
 
 }

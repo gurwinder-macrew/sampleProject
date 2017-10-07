@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DetailPage } from '../pages/detail/detail';
 import { InfoPage } from '../pages/info/info';
+import { FriendsPage } from '../pages/friends/friends';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { InfoPage } from '../pages/info/info';
     HomePage,
     TabsPage,
     DetailPage,
-    InfoPage
+    InfoPage,
+    FriendsPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { InfoPage } from '../pages/info/info';
     HomePage,
     TabsPage,
     DetailPage,
-    InfoPage
+    InfoPage,
+    FriendsPage
   ],
   providers: [
     StatusBar,
